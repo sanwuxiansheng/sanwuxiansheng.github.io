@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ES6 | 久念的个人博客</title>
+    <meta name="description" content="村上春树说过:总之岁月漫长，然而值得等待">
+    <link rel="icon" href="../.vuepress/public/img/logo.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.2412c64d.css" as="style"><link rel="preload" href="/assets/js/app.27194c62.js" as="script"><link rel="preload" href="/assets/js/2.660d2c2d.js" as="script"><link rel="preload" href="/assets/js/16.96d600e7.js" as="script"><link rel="prefetch" href="/assets/js/10.7e6638b6.js"><link rel="prefetch" href="/assets/js/11.3c882514.js"><link rel="prefetch" href="/assets/js/12.8f14a644.js"><link rel="prefetch" href="/assets/js/13.7ad68c93.js"><link rel="prefetch" href="/assets/js/14.e7071a84.js"><link rel="prefetch" href="/assets/js/15.c868008a.js"><link rel="prefetch" href="/assets/js/17.216bbb18.js"><link rel="prefetch" href="/assets/js/18.132d27eb.js"><link rel="prefetch" href="/assets/js/19.94321978.js"><link rel="prefetch" href="/assets/js/20.5ff51867.js"><link rel="prefetch" href="/assets/js/21.5034d234.js"><link rel="prefetch" href="/assets/js/22.6e708266.js"><link rel="prefetch" href="/assets/js/23.afc937fb.js"><link rel="prefetch" href="/assets/js/24.6a2d27de.js"><link rel="prefetch" href="/assets/js/25.40bacf7a.js"><link rel="prefetch" href="/assets/js/26.94f1f69e.js"><link rel="prefetch" href="/assets/js/27.9009e8ee.js"><link rel="prefetch" href="/assets/js/28.d79333d2.js"><link rel="prefetch" href="/assets/js/29.3451956d.js"><link rel="prefetch" href="/assets/js/3.25a26ba3.js"><link rel="prefetch" href="/assets/js/30.601df3fc.js"><link rel="prefetch" href="/assets/js/31.80e18c66.js"><link rel="prefetch" href="/assets/js/32.e6dd8fca.js"><link rel="prefetch" href="/assets/js/33.beab8789.js"><link rel="prefetch" href="/assets/js/34.7a02303d.js"><link rel="prefetch" href="/assets/js/4.f74a38f4.js"><link rel="prefetch" href="/assets/js/5.4c28bf85.js"><link rel="prefetch" href="/assets/js/6.11aca216.js"><link rel="prefetch" href="/assets/js/7.8d7844b8.js"><link rel="prefetch" href="/assets/js/8.56426901.js"><link rel="prefetch" href="/assets/js/9.ecc15e63.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2412c64d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">久念的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link router-link-active">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link router-link-active">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/frontEnd/" class="sidebar-link">简述vue</a></li><li><a href="/frontEnd/test.html" class="sidebar-link">vuex</a></li><li><a href="/frontEnd/vue.html" class="sidebar-link">vue脚手架&amp;路由</a></li><li><a href="/frontEnd/MVVM.html" class="sidebar-link">vue源码解析</a></li><li><a href="/frontEnd/React.html" class="sidebar-link">React</a></li><li><a href="/frontEnd/React-router.html" class="sidebar-link">React-router</a></li><li><a href="/frontEnd/Redux.html" class="sidebar-link">Redux</a></li><li><a href="/frontEnd/React-ui.html" class="sidebar-link">最流行的开源React UI组件库</a></li><li><a href="/frontEnd/wxmin.html" class="sidebar-link">小程序</a></li><li><a href="/frontEnd/ajax.html" class="sidebar-link">ajax</a></li><li><a href="/frontEnd/es6.html" class="active sidebar-link">ES6</a></li><li><a href="/frontEnd/TypeScript.html" class="sidebar-link">TypeScript (基础)</a></li><li><a href="/frontEnd/ts.html" class="sidebar-link">TypeScript (进阶)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="es6"><a href="#es6" class="header-anchor">#</a> ES6</h1> <h4 id="let和const"><a href="#let和const" class="header-anchor">#</a> let和const</h4> <ul><li>let
+<ol><li>作用:
+与var类似, 用于声明一个变量</li> <li>特点:
+在块作用域内有效
+不能重复声明
+不会预处理, 不存在提升</li> <li>应用:
+循环遍历加监听
+使用let取代var是趋势</li></ol></li> <li>const
+<ol><li>作用:
+定义一个常量</li> <li>特点:
+不能修改
+其它特点同let</li> <li>应用:
+保存不用改变的数据</li></ol></li> <li>let 定义 变量</li> <li>const 定义 常量
+<ol><li>默认变量使用let定义，今后let使用很多，只有确定不变的量用const  90%以上用let定义的</li> <li>默认变量使用const定义，今后const使用很多，只有确定可变的量用let  90%以上用const定义的
+默认就用const定义，只有后面的值发生变化，在改为let</li></ol></li></ul> <h4 id="变量的解构赋值"><a href="#变量的解构赋值" class="header-anchor">#</a> 变量的解构赋值</h4> <ol><li>理解:</li></ol> <ul><li>从对象或数组中提取数据, 并赋值给变量(多个)
+<ul><li><code>const person = {name: 'jack', age: 18};</code> <code>const { age, sex, name } = person;</code> <code>console.log(name, age, sex);</code></li></ul></li></ul> <ol start="3"><li>对象的解构赋值: 没有顺序关系
+<code>let {n, a} = {n:'tom', a:12}</code></li> <li>数组的解构赋值: 根据顺序一一对应
+<code>let [a,b] = [1, 'atguigu'];</code></li> <li>用途
+<ul><li>给多个形参赋值</li></ul></li> <li>对函数参数解构赋值，一个解构赋值语法对应一个参数（与结构赋值语法中多少个变量没有关系）</li></ol> <h4 id="模板字符串"><a href="#模板字符串" class="header-anchor">#</a> 模板字符串</h4> <ol><li>模板字符串 : 简化字符串的拼接</li></ol> <ul><li>模板字符串必须用 `` 包含</li> <li>变化的部分使用${xxx}定义</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const person = {name: 'jack', age: 18};
+  console.log('姓名：' + person.name + ' 年龄：' + person.age);
+  console.log(`姓名：${person.name} 年龄: ${person.age}`);
+</code></pre></div><h4 id="对象的简写方法"><a href="#对象的简写方法" class="header-anchor">#</a> 对象的简写方法</h4> <p>简化的对象写法</p> <ul><li>省略同名的属性值</li> <li>省略方法的function</li> <li>例如:<div class="language-let x = 1; extra-class"><pre class="language-text"><code>let y = 2;
+let point = {
+  x,
+  y,
+  setX (x) {this.x = x}
+};
+</code></pre></div></li></ul> <h4 id="形参默认值"><a href="#形参默认值" class="header-anchor">#</a> 形参默认值</h4> <p>形参的默认值----当不传入参数的时候默认使用形参里的默认值</p> <pre><code>function Point(x = 1,y = 2) {
+this.x = x;
+this.y = y;
+}
+</code></pre> <p>默认值：没有传值就使用默认值，传值了就使用传入的值</p> <h4 id="三点运算符"><a href="#三点运算符" class="header-anchor">#</a> 三点运算符</h4> <p>用途</p> <ol><li>rest(可变)参数
+<ul><li>用来取代arguments 但比 arguments 灵活,只能是最后部分形参参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function fun(...values) {
+    console.log(arguments);
+    arguments.forEach(function (item, index) {
+        console.log(item, index);
+    });
+    console.log(values);
+    values.forEach(function (item, index) {
+        console.log(item, index);
+    })
+}
+fun(1,2,3);
+</code></pre></div></li> <li>扩展运算符</li></ol> <div class="language- extra-class"><pre class="language-text"><code>  let arr1 = [1,3,5];
+  let arr2 = [2,...arr1,6];
+  arr2.push(...arr1);
+  function sum(a, ...args) {
+    // ...运算符 取代 arguments
+    console.log(args); // 真数组
+    console.log(arguments); // 伪数组
+  }
+</code></pre></div><h4 id="箭头函数"><a href="#箭头函数" class="header-anchor">#</a> 箭头函数</h4> <ul><li><p>作用: 定义匿名函数</p></li> <li><p>基本语法:</p> <ul><li>没有参数: () =&gt; console.log('xxxx')</li> <li>一个参数: i =&gt; i+2</li> <li>大于一个参数: (i,j) =&gt; i+j</li> <li>函数体不用大括号: 默认返回结果</li> <li>函数体如果有多个语句, 需要用{}包围，若有需要返回的内容，需要手动返回</li></ul></li> <li><p>使用场景: 多用来定义回调函数</p></li> <li><p>箭头函数的特点：
+1、简洁
+2、箭头函数没有自己的this，箭头函数的this不是调用的时候决定的，而是在定义的时候处在的对象就是它的this
+3、扩展理解： 箭头函数的this看外层的是否有函数，
+如果有，外层函数的this就是内部箭头函数的this，
+如果没有，则this是window。</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 箭头函数
+  const fn = () =&gt; {};
+  // 形参只有一个, 可以省略括号
+  const fn1 = x =&gt; { console.log(x); };
+  // 形参没有或者有多个
+  const fn2 = (x, y) =&gt; {};
+  console.log(fn1(1));
+  // 当代码只有一条语法时, 可以省略大括号，会将语句结果作为函数的返回值返回
+  const fn3 = x =&gt; x + 1;
+  console.log(fn3(1));
+  // 当代码没有或多条语句时
+  const fn4 = x =&gt; {
+    console.log(x);
+    return x + 1;
+  }
+</code></pre></div><h4 id="promise对象"><a href="#promise对象" class="header-anchor">#</a> Promise对象</h4> <ol><li>promise就是一个异步编程的解决方案，用来解决回调地狱问题</li> <li>理解:</li></ol> <ul><li>Promise对象: 代表了未来某个将要发生的事件(通常是一个异步操作)</li> <li>有了promise对象, 可以将异步操作以同步的流程表达出来, 避免了层层嵌套的回调函数(俗称'回调地狱')</li> <li>ES6的Promise是一个构造函数, 用来生成promise实例</li></ul> <ol start="2"><li>使用promise基本步骤(2步):</li></ol> <ul><li>创建promise对象<div class="language- extra-class"><pre class="language-text"><code>let promise = new Promise((resolve, reject) =&gt; {
+    //初始化promise状态为 pending
+  //执行异步操作
+  if(异步操作成功) {
+    resolve(value);//修改promise的状态为fullfilled
+  } else {
+    reject(errMsg);//修改promise的状态为rejected
+  }
+})
+</code></pre></div></li> <li>调用promise的then()<div class="language- extra-class"><pre class="language-text"><code>promise.then(function(
+  result =&gt; console.log(result),
+  errorMsg =&gt; alert(errorMsg)
+))
+</code></pre></div></li></ul> <ol start="3"><li>promise对象的3个状态</li></ol> <ul><li>pending: 初始化状态</li> <li>fullfilled: 成功状态</li> <li>rejected: 失败状态</li></ul> <ol start="4"><li>应用:</li></ol> <ul><li><p>使用promise实现超时处理</p></li> <li><p>使用promise封装处理ajax请求</p> <div class="language- extra-class"><pre class="language-text"><code>let request = new XMLHttpRequest();
+request.onreadystatechange = function () {
+}
+request.responseType = 'json';
+request.open(&quot;GET&quot;, url);
+request.send();
+</code></pre></div></li> <li><p>new Promise(), 会创建promise实例对象，实例对象内部默认是pending状态（初始化状态）</p> <ul><li>resolve()  将promise状态由初始化状态改为 fullfilled 成功的状态</li> <li>reject() 将promise状态由初始化状态改为 rejected 失败的状态</li> <li>promise状态只能有初始化状态改为成功/失败的状态。不能由成功变成失败或者失败变成成功</li></ul></li> <li><p>promise实例对象， then方法</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>promise.then((result) =&gt; {
+// 当promise对象状态变成成功的状态时，会调用当前函数
+// 成功的回调函数可以接受resolve方法传入参数
+console.log('成功的回调函数触发了~');
+console.log(result);
+sum(1, 2);
+}, (error) =&gt; {
+// 当promise对象状态变成失败的状态时，会调用当前函数
+// 失败的回调函数可以接受reject方法传入参数
+console.log('失败的回调函数触发了~');
+console.log(error);
+})
+</code></pre></div><h4 id="symbol"><a href="#symbol" class="header-anchor">#</a> Symbol</h4> <ul><li>前言：ES5中对象的属性名都是字符串，容易造成重名，污染环境</li> <li>每次调用Symbol函数，返回一个唯一的symbol数据
+一般给对象设置唯一的属性。
+多了一个数据类型：Symbol
+<ul><li>Symbol：
+概念：ES6中的添加了一种原始数据类型symbol(已有的原始数据类型：String, Number, boolean, null, undefined, 对象)</li> <li>特点：
+<ul><li>Symbol属性对应的值是唯一的，解决命名冲突问题</li> <li>Symbol值不能与其他数据进行计算，包括同字符串拼串</li> <li>for in, for of遍历时不会遍历symbol属性。</li></ul></li> <li>使用：
+<ul><li>调用Symbol函数得到symbol值<div class="language- extra-class"><pre class="language-text"><code>let symbol = Symbol();
+let obj = {};
+obj[symbol] = 'hello';
+</code></pre></div></li> <li>传参标识<div class="language- extra-class"><pre class="language-text"><code>let symbol = Symbol('one');
+let symbol2 = Symbol('two');
+console.log(symbol);// Symbol('one')
+console.log(symbol2);// Symbol('two')
+</code></pre></div></li> <li>内置Symbol值
+<ul><li>除了定义自己使用的Symbol值以外，ES6还提供了11个内置的Symbol值，指向语言内部使用的方法。</li></ul> <ul><li>Symbol.iterator</li></ul> <ul><li>对象的Symbol.iterator属性，指向该对象的默认遍历器方法(后边讲)</li></ul></li></ul></li></ul></li></ul> <h4 id="iterator遍历器"><a href="#iterator遍历器" class="header-anchor">#</a> Iterator遍历器</h4> <ul><li>概念： iterator是一种接口机制，为各种不同的数据结构提供统一的访问机制</li> <li>作用：
+<ul><li>为各种数据结构，提供一个统一的、简便的访问接口；</li> <li>使得数据结构的成员能够按某种次序排列；</li> <li>ES6创造了一种新的遍历命令for...of循环，Iterator接口主要供for...of消费。
+工作原理：</li></ul> <ul><li>创建一个指针对象(遍历器对象)，指向数据结构的起始位置。</li> <li>第一次调用next方法，指针自动指向数据结构的第一个成员</li> <li>接下来不断调用next方法，指针会一直往后移动，直到指向最后一个成员</li> <li>每调用next方法返回的是一个包含value和done的对象，{value: 当前成员的值,done: 布尔值}
+<ul><li>value表示当前成员的值，done对应的布尔值表示当前的数据的结构是否遍历结束。</li> <li>当遍历结束的时候返回的value值是undefined，done值为false
+原生具备iterator接口的数据(可用for of遍历)</li></ul></li></ul> <ul><li>Array</li> <li>arguments</li> <li>set容器</li> <li>map容器</li> <li>String</li> <li>。。。</li></ul></li> <li>iterator是一个接口机制，为了让所有数据用统一的方式遍历（ for of ）
+<ul><li>通过查看数据类型上是否有Symbol(Symbol.iterator)方法</li> <li>String 、Array、Set、Map、 arguments、dom元素集合（querySelectorAll）</li></ul></li> <li>遍历的方法
+<ul><li>forEach只能数组使用，推荐使用</li> <li>for 只能数组使用, 性能最好</li> <li>while / do while 任意值使用</li> <li>for in 通常用于对象</li> <li>for of 当你不确定要遍历的是什么数据类型。这时候用for of</li></ul></li></ul> <h4 id="generator函数"><a href="#generator函数" class="header-anchor">#</a> Generator函数</h4> <pre><code>概念：
+  1、ES6提供的解决异步编程的方案之一
+  2、Generator函数是一个状态机，内部封装了不同状态的数据，
+  3、用来生成遍历器对象
+  4、可暂停函数(惰性求值), yield可暂停，next方法可启动。每次返回的是yield后的表达式结果
+特点：
+  1、function 与函数名之间有一个星号
+  2、内部用yield表达式来定义不同的状态
+  例如：
+    function* generatorExample(){
+      let result = yield 'hello';  // 状态值为hello
+      yield 'generator'; // 状态值为generator
+    }
+  3、generator函数返回的是指针对象(接11章节里iterator)，而不会执行函数内部逻辑
+  4、调用next方法函数内部逻辑开始执行，遇到yield表达式停止，返回{value: yield后的表达式结果/undefined, done: false/true}
+  5、再次调用next方法会从上一次停止时的yield处开始，直到最后
+  6、yield语句返回结果通常为undefined， 当调用next方法时传参内容会作为启动时yield语句的返回值。
+</code></pre> <div class="language- extra-class"><pre class="language-text"><code>function* fn() {
+    console.log('函数开始执行了~');
+    const flag = true;
+    const result = yield flag ? 123 : 456;
+    console.log(result);
+    console.log('函数执行完了~');
+  }
+  // 执行generator函数，返回值是一个iterator对象
+  const iteratorObj = fn();
+  console.log(iteratorObj);
+  // 通过iterator对象的next方法执行函数体代码（推着函数动一下）
+  const result1 = iteratorObj.next(111);
+  console.log(result1);  // {value: 123, done: false}  value 看yield后面表达式的值, done 看函数是否执行完毕：没有执行完就是false 执行完了就是true
+  const result2 = iteratorObj.next(222);
+  console.log(result2);
+  // 手动给对象添加iterator接口
+  console.log(Symbol.iterator);
+  const person = {
+    name: 'jack',
+    age: 18,
+    sex: '男'
+  }
+  Object.prototype[Symbol.iterator] = function* () {
+    for (let key in this) {
+      yield this[key];
+    }
+  }
+
+</code></pre></div><ul><li>案例</li></ul> <div class="language- extra-class"><pre class="language-text"><code>/*
+ 需求：请求a数据，再请求b数据，请求c数据
+   */
+
+  function* generator() {
+    console.log('函数开始执行了~');
+
+    const result1 = yield setTimeout(() =&gt; {
+      console.log('请求回来了a数据');
+      // 请求成功，让generator继续执行
+      iteratorObj.next('a数据');
+    }, 3000);
+
+    const result2 = yield setTimeout(() =&gt; {
+      console.log('请求回来了b数据');
+      // 请求成功，让generator继续执行
+      iteratorObj.next('b数据');
+    }, 2000);
+
+    const result3 = yield setTimeout(() =&gt; {
+      console.log('请求回来了c数据');
+      // 请求成功，让generator继续执行
+      iteratorObj.next('c数据');
+    }, 1000);
+
+    console.log(result1, result2, result3);
+
+    console.log('函数执行完毕了~');
+  }
+
+  const iteratorObj = generator();
+  // 为了执行第一个请求
+  iteratorObj.next();
+</code></pre></div><h4 id="async函数"><a href="#async函数" class="header-anchor">#</a> async函数</h4> <ul><li>async函数(源自ES2017 - ES8)</li> <li>概念： 真正意义上去解决异步回调的问题，同步流程表达异步操作
+本质： Generator的语法糖</li> <li>语法：
+async function foo(){
+await 异步操作;
+await 异步操作；
+}</li> <li>特点：
+<ul><li>不需要像Generator去调用next方法，遇到await等待，当前的异步操作完成就往下执行</li> <li>返回的总是Promise对象，可以用then方法进行下一步操作</li> <li>async取代Generator函数的星号*，await取代Generator的yield</li> <li>语意上更为明确，使用简单，经临床验证，暂时没有任何副作用</li></ul></li> <li>案例1</li></ul> <div class="language- extra-class"><pre class="language-text"><code>async function asyncFn() {
+    console.log('函数开始执行了~');
+    /* const promise = new Promise((resolve, reject) =&gt; setTimeout(() =&gt; reject(123456), 2000));
+    const promise = new Promise((resolve, reject) =&gt; setTimeout(reject.bind(null, 123456), 2000));
+    */
+    const promise = new Promise((resolve, reject) =&gt; setTimeout(resolve.bind(null, 123456), 2000));
+    // const promise = Promise.resolve();
+    // await只等promise对象：等promise对象状态由初始化变成成功状态。
+    // （一旦promise对象状态是初始化状态，一直等。一旦promise对象状态变成成功的状态，就不等了，执行后面代码）
+    // 一旦promise对象状态变成失败的状态，就不执行后面代码(如果捕获了async函数promise的异常，就不报错，没有捕获，就会报错)
+    // result的值就是resolve()传入的参数
+    const result = await promise;
+    console.log(result);
+    await promise;
+    console.log('函数执行完毕了~');
+    return 666;
+  }
+  // async函数返回值是一个promise对象: 默认是resolved状态
+  // 如果函数中有promise对象变成失败的状态，就是rejected状态
+  const result = asyncFn();
+  result
+    // 看async函数里面返回值，就是result的值
+    .then((result) =&gt; {
+      console.log(result);
+    })
+    .catch((error) =&gt; {
+      console.log(error);
+    })
+  console.log(result);
+</code></pre></div><ul><li>案例2</li></ul> <div class="language- extra-class"><pre class="language-text"><code>async function asyncFn() {
+
+    const result1 = await new Promise((resolve, reject) =&gt; {
+      setTimeout(() =&gt; {
+        console.log('a数据请求成功了~');
+        resolve('a数据');
+      }, 3000)
+    })
+
+    const result2 = await new Promise((resolve, reject) =&gt; {
+      setTimeout(() =&gt; {
+        console.log('b数据请求成功了~');
+        resolve('b数据');
+      }, 2000)
+    })
+
+    const result3 = await new Promise((resolve, reject) =&gt; {
+      setTimeout(() =&gt; {
+        console.log('c数据请求成功了~');
+        resolve('c数据');
+      }, 2000)
+    })
+
+    console.log(result1, result2, result3);
+    return [result1, result2, result3];
+  }
+
+  const promise = asyncFn();
+
+  promise
+    .then((res) =&gt; {
+      console.log(res); // [result1, result2, result3]
+    })
+</code></pre></div><h4 id="class类"><a href="#class类" class="header-anchor">#</a> class类</h4> <ol><li>通过class定义类/实现类的继承</li> <li>在类中通过constructor定义构造方法</li> <li>通过new来创建类的实例</li> <li>通过extends来实现类的继承</li> <li>通过super调用父类的构造方法</li> <li>重写从父类中继承的一般方法</li></ol> <div class="language- extra-class"><pre class="language-text"><code>// 定义类：构造函数
+  class Father {
+    // 给实例对象添加属性
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    // 给实例对象添加方法
+    setName(name) {
+      this.name = name;
+    }
+  }
+  // 定义子类继承父类，自动继承父类的属性和方法
+  // 使用继承必须在constructor函数中调用super方法或者不写constructor
+  class Son extends Father{
+    // 给实例对象添加属性
+    constructor(name, age, sex) {
+      super(name, age); // 调用父类的构造方法： constructor
+      this.sex = sex;
+    }
+    // 给实例对象添加方法
+    setAge(age) {
+      this.age = age;
+    }
+  }
+  console.log(Father.prototype);
+  console.log(typeof Son);
+  const s = new Son('bob', 20, '男');
+  console.log(s);
+</code></pre></div><h4 id="字符串扩展"><a href="#字符串扩展" class="header-anchor">#</a> 字符串扩展</h4> <ol><li>String.prototype.includes(str) : 判断是否包含指定的字符串</li> <li>String.prototype.startsWith(str) : 判断是否以指定字符串开头</li> <li>String.prototype.endsWith(str) : 判断是否以指定字符串结尾</li> <li>String.prototype.repeat(count) : 重复指定次数</li></ol> <div class="language- extra-class"><pre class="language-text"><code>const str = 'atguigu';
+  console.log(str.includes('gug')); // true
+  console.log(str.startsWith('atg')); // true
+  console.log(str.endsWith('gu')); // true
+  console.log(str.repeat(3)); // 'atguiguatguiguatguigu'
+</code></pre></div><h4 id="数值扩展"><a href="#数值扩展" class="header-anchor">#</a> 数值扩展</h4> <ol><li>二进制与八进制数值表示法: 二进制用0b, 八进制用0o</li> <li>Number.isFinite(i) : 判断是否是有限大的数</li> <li>Number.isNaN(i) : 判断是否是NaN</li> <li>Number.isInteger(i) : 判断是否是整数</li> <li>Number.parseInt(str) : 将字符串转换为对应的数值</li> <li>Math.trunc(i) : 直接去除小数部分</li></ol> <div class="language- extra-class"><pre class="language-text"><code> console.log(0o666); // 0 - 7
+  console.log(0b1010); // 0 - 1   8421法
+  console.log(Infinity); // 正无穷大
+  console.log(-Infinity); // 负无穷大
+  console.log(NaN); // not a number
+  console.log(Number.isFinite(Infinity)); // false
+  console.log(Number.isNaN(NaN)); // true  x !== x
+  console.log(NaN === NaN); // NaN不与任何数相等，包括它自身
+  console.log(Number.isInteger(1.1)); // false
+  console.log(Number.parseInt('123a.123')); // 123  整型：整数
+  console.log(Number.parseFloat('123.123')); // 123.123 浮点型：小数
+  console.log(Math.trunc(456.865)); // 456
+  console.log(Math.floor(456.865)); // 456
+</code></pre></div><h4 id="数组扩展"><a href="#数组扩展" class="header-anchor">#</a> 数组扩展</h4> <ol><li>Array.from(v) : 将伪数组对象或可遍历对象转换为真数组</li> <li>Array.of(v1, v2, v3) : 将一系列值转换成数组</li> <li>Array.prototype.find(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素</li> <li>Array.prototype.findIndex(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素下标</li></ol> <div class="language- extra-class"><pre class="language-text"><code>// 伪数组对象
+  const btns = document.querySelectorAll('button');
+  // 将伪数组转化为真数组
+  const newBtns1 = Array.from(btns);
+  console.log(newBtns1);
+  const newBtns2 = Array.prototype.slice.call(btns);
+  console.log(newBtns2);
+  const newBtns3 = [...btns];
+  console.log(newBtns3);
+  console.log(Array.of(1, true, {})); // [1, true, {}]
+  const arr = [{age: 18}, {age: 19}, {age: 20}, {age: 21}];
+  // const obj = arr.find((item, index, arr) =&gt; item.age === 20);
+  const index = arr.findIndex((item, index, arr) =&gt; item.age === 20);
+  console.log(index);
+</code></pre></div><h4 id="对象扩展"><a href="#对象扩展" class="header-anchor">#</a> 对象扩展</h4> <ol><li>Object.is(v1, v2)
+<ul><li>判断2个数据是否完全相等</li></ul></li> <li>Object.assign(target, source1, source2..)
+<ul><li>将源对象的属性复制到目标对象上</li></ul></li> <li>直接操作 <strong>proto</strong> 属性</li></ol> <div class="language- extra-class"><pre class="language-text"><code>let obj2 = {};
+obj2.__proto__ = obj1;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 全等运算符的问题
+  console.log(0 === -0); // true  false
+  console.log(NaN === NaN); // false  true
+  // Object.is方法解决
+  console.log(Object.is(1, 1)); // true
+  console.log(Object.is(0, -0)); // false
+  console.log(Object.is(NaN, NaN)); // true
+//is方法用原生实现
+  function is(a, b) {
+    /*if (a === b) {
+      // 判断 0 和 -0 的特殊情况 返回 false
+      // 0 和 0 / -0 和 -0 的情况返回 true
+      // return !(-a === b);
+      return !(-1 / a === 1 / b);
+    } else {
+      // 判断 NaN 和 NaN 的特殊情况
+      return a !== a &amp;&amp; b !== b;
+    }*/
+    // return a === b ? ((-1 / a === 1 / b) ? false : true) : (a !== a &amp;&amp; b !== b ? true : false);
+    // return (a === b &amp;&amp; (!(-1 / a === 1 / b)) || (a !== a &amp;&amp; b !== b);
+    return a === b ? !(-1 / a === 1 / b) : a !== a &amp;&amp; b !== b;
+  }
+  console.log(is(0, -0)); // false
+  console.log(is(0, 0)); // true
+  console.log(is({}, {})); // false
+  console.log(is(NaN, NaN)); // true
+  console.log(is(true, true)); // true
+  const obj = {};
+  const obj1 = {name: 'jack'};
+  const obj2 = {age: 18};
+  // 将后面目标对象上的属性和方法复制到源对象上
+  const result = Object.assign(obj, obj1, obj2);
+  console.log(result === obj);
+</code></pre></div><h4 id="深度克隆"><a href="#深度克隆" class="header-anchor">#</a> 深度克隆</h4> <ul><li>数据类型：
+<ul><li>数据分为基本的数据类型(String, Number, boolean, Null, Undefined)和对象数据类型</li></ul> <ul><li>基本数据类型：
+特点： 存储的是该对象的实际数据</li> <li>对象数据类型：
+特点： 存储的是该对象在栈中引用，真实的数据存放在堆内存里</li></ul></li> <li>复制数据
+<ul><li>基本数据类型存放的就是实际的数据，可直接复制
+let number2 = 2;
+let number1 = number2;</li> <li>克隆数据：对象/数组
+<ul><li>区别： 浅拷贝/深度拷贝
+判断： 拷贝是否全部产生了新的数据还是拷贝的是数据的引用
+<ul><li>知识点：对象数据存放的是对象在栈内存的引用，直接复制的是对象的引用</li></ul> <div class="language- extra-class"><pre class="language-text"><code>let obj = {username: 'kobe'}
+let obj1 = obj; // obj1
+```复制了obj在栈内存的引用
+</code></pre></div></li></ul>
+2、常用的拷贝技术
+<ul><li>arr.concat(): 数组浅拷贝
+2). arr.slice(): 数组浅拷贝</li> <li>JSON.parse(JSON.stringify(arr/obj)): 数组或对象深拷贝, 但不能处理函数数据</li> <li>浅拷贝包含函数数据的对象/数组</li> <li>深拷贝包含函数数据的对象/数组</li></ul></li></ul></li> <li>浅度克隆</li></ul> <div class="language- extra-class"><pre class="language-text"><code>  let obj3 = Object.assign({}, obj1);
+  obj3.hobby.push('rap');
+  console.log(obj3);
+  console.log(obj1);
+</code></pre></div><ul><li>深度克隆
+<ul><li>JSON能实现深度克隆，不能克隆函数数据</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>let obj1 = {name: 'jack', age: 18, hobby: ['篮球', '唱', '跳'], setName (name) {this.name = name;}};
+const json = JSON.stringify(obj1);
+const obj4 = JSON.parse(json);
+console.log(obj1, obj4);
+obj4.hobby.push('rap');
+console.log(obj1, obj4);
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 检查数据类型
+  function checkType(target) {
+    return Object.prototype.toString.call(target).slice(8, -1);
+  }
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 深度克隆： 深度克隆所有数据
+  function deepClone(target) {
+    // 因为不确定克隆的是什么数据，但是能确定的是一定是引用数据类型
+    let result = null;
+    // 检查数据的类型
+    const type = checkType(target);
+    // 判断数据的类型，如果是对象/数组就处理，不是就直接返回
+    if (type === 'Object') {
+      result = {};
+    } else if (type === 'Array') {
+      result = [];
+    } else {
+      // 其他类型就直接返回
+      return target;
+    }
+    // for in 即能遍历对象也能遍历数组
+    for (let key in target) {
+      // 获取属性值
+      const value = target[key];
+      // 将克隆的值作为新对象的某个属性的值
+      // const newValue = deepClone(value);
+      // result[key] = newValue;
+      result[key] = deepClone(value);
+    }
+    return result;
+  }
+  const person = {name: 'jack', age: 18, hobby: ['篮球', '唱', '跳'], sex: { option1: '男', option2: '女' }, setName (name) {this.name = name;}};
+  const newObj = deepClone(person);
+  newObj.hobby.push('rap');
+  console.log(person, newObj);
+</code></pre></div><h4 id="set和map数据结构"><a href="#set和map数据结构" class="header-anchor">#</a> Set和Map数据结构</h4> <ol><li><p>Set容器 : 无序不可重复的多个value的集合体</p> <ul><li>Set()</li> <li>Set(array)</li> <li>Set.prototype.add(value) 给set容器添加一个值</li> <li>Set.prototype.delete(value) 删除一个</li> <li>Set.prototype.has(value)</li> <li>Set.prototype.clear() 清空所有</li> <li>size</li></ul></li> <li><p>Map容器 : 无序的 key不重复的多个key-value的集合体</p> <ul><li>Map()</li> <li>Map(array)</li> <li>set(key, value)//添加</li> <li>get(key)</li> <li>delete(key)</li> <li>has(key)</li> <li>clear()</li> <li>size</li></ul></li></ol> <div class="language- extra-class"><pre class="language-text"><code>const arr = [2, 5, 8, 5, 1, 4, 8];
+  const s1 = new Set(arr);
+  console.log(s1);
+  // 数组去重
+  console.log([...new Set(arr)]);
+
+  s1.add(9);
+  console.log(s1);
+  console.log(s1.has(9));
+  s1.clear();
+  console.log(s1);
+
+  // 无序的 key不重复的多个key-value的集合体
+  const array = [1, 2, 3];
+  const m1 = new Map([[{name: 'jack'}, function fn() {}], [array, true], [array, false]]);
+  console.log(m1);
+</code></pre></div><h4 id="es7-常用的"><a href="#es7-常用的" class="header-anchor">#</a> ES7(常用的)</h4> <ol><li>指数运算符(幂): **</li> <li>Array.prototype.includes(value) : 判断数组中是否包含指定value</li></ol> <div class="language- extra-class"><pre class="language-text"><code>console.log(3 ** 3);//27
+const arr = [1, 2, 5, 6, 8];
+console.log(arr.includes(3));//true
+</code></pre></div><h4 id="es8-常用的"><a href="#es8-常用的" class="header-anchor">#</a> ES8(常用的)</h4> <p><strong>==async函数也是ES8中提出的==</strong></p> <ul><li>Object.values()</li> <li>Object.entries()</li> <li>Object.keys()</li></ul> <div class="language- extra-class"><pre class="language-text"><code> const person = {name: 'jack', age: 18}; // [['name', 'jack'], ['age': 18]]
+  // 提取对象中所有属性名，作为一个数组返回
+  console.log(Object.keys(person));
+  // 提取对象中所有属性值，作为一个数组返回
+  console.log(Object.values(person));
+  console.log(Object.entries(person)); // [['name', 'jack'], ['age': 18]]
+</code></pre></div><h4 id="es9-常用的-promise-finally"><a href="#es9-常用的-promise-finally" class="header-anchor">#</a> ES9(常用的)Promise.finally</h4> <div class="language- extra-class"><pre class="language-text"><code>const promise = new Promise((resolve, reject) =&gt; setTimeout(reject, 1000));
+  promise
+    .then(() =&gt; {
+      console.log('then');
+    })
+    .catch(() =&gt; {
+      console.log('catch');
+    })
+    .finally(() =&gt; {
+      // 不管成功还是失败都会触发
+      console.log('finally');
+    })
+</code></pre></div><h4 id="es10-常用的"><a href="#es10-常用的" class="header-anchor">#</a> ES10(常用的)</h4> <ul><li>Array扩展方法
+<ul><li>数组降维、数组的扁平化</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 数组降维、数组的扁平化
+  const arr = [[1, 2], [[[3]]], [[4], [[[[5]], 6]]]];
+  console.log(arr.flat(1));
+  console.log(arr.flat(Infinity));
+/*
+    1. flat 全部降成1维
+    2. 可以传参，根据参数降维
+  flat方法的实现源代码
+  Array.prototype.flat = function (num) {
+    // this 就指向要处理的数组  --&gt; arr.flat()
+    let result = [];
+    /!*this.forEach((item, index) =&gt; {
+      if (Array.isArray(item)) {
+        result = result.concat(item.flat());
+      } else {
+        result.push(item);
+      }
+    })*!/
+    this.forEach((item) =&gt; Array.isArray(item) ? result = result.concat(item.flat()) : result.push(item));
+    return result;
+  }
+
+  Array.prototype.flat = function (num) {
+    // this 就指向要处理的数组  --&gt; arr.flat()
+    num--;
+    if (num &lt; 0) return this;
+    let result = [];
+    /!*this.forEach((item, index) =&gt; {
+      if (Array.isArray(item)) {
+        result = result.concat(item.flat());
+      } else {
+        result.push(item);
+      }
+    })*!/
+    this.forEach((item) =&gt; Array.isArray(item) ? result = result.concat(item.flat(num)) : result.push(item));
+    return result;
+  }
+*/
+</code></pre></div><ul><li>动态import</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 按需加载
+  document.getElementById('btn').onclick = function () {
+    // 只会加载一次
+    import('./a.js');
+  }
+</code></pre></div><h4 id="函数节流和函数防抖"><a href="#函数节流和函数防抖" class="header-anchor">#</a> 函数节流和函数防抖</h4> <ul><li>节流函数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 绑定滚轮事件
+  // 需求：滚轮事件发现单位时间内触发回调函数的次数太多，性能不好
+  // 解决：让函数调用次数更少
+  // 节流函数：在单位时间内让函数只调用一次
+  document.onscroll = throttle(function (e) {
+    console.log('滚轮事件触发了~');
+    console.log(e);
+    console.log(this);
+  }, 1000)
+
+  // 节流函数
+  function throttle(fn, time) {
+    // 开始时间
+    let startTime = 0;
+    // 实际上下面函数就是DOM事件回调函数
+    return function () {
+
+      // 结束时间: 调用当前函数的时间
+      const endTime = Date.now();
+      // fn函数的this指向问题，参数有问题（少event）
+      if (endTime - startTime &gt;= time) {
+        // 大于1s, 可以触发， 小于1s就不触发
+        fn.apply(this, arguments);
+        // 重置开始时间
+        startTime = endTime;
+      }
+    }
+  }
+</code></pre></div><ul><li>防抖函数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 绑定滚轮事件
+  // 需求：滚轮事件发现单位时间内触发回调函数的次数太多，性能不好
+  // 解决：让函数调用次数更少
+  // 节流函数：在单位时间内让函数只调用一次，是第一次生效
+  // 防抖函数：在单位时间内让函数只调用一次，是最后一次生效
+  document.onscroll = debounce(function (e) {
+    console.log('滚轮事件触发了~');
+    console.log(e);
+    console.log(this);
+  }, 1000)
+  // 防抖函数
+  function debounce(fn, time) {
+    let timerId = null;
+    // 实际上下面函数就是DOM事件回调函数
+    return function () {
+      clearTimeout(timerId);
+      const args = arguments;
+      timerId = setTimeout(() =&gt; {
+        // fn函数的this指向问题，参数有问题（少event）
+        // 大于1s, 可以触发， 小于1s就不触发
+        fn.apply(this, args);
+      }, time);
+    }
+  }
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/frontEnd/ajax.html" class="prev">ajax</a></span> <span class="next"><a href="/frontEnd/TypeScript.html">TypeScript (基础)</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.27194c62.js" defer></script><script src="/assets/js/2.660d2c2d.js" defer></script><script src="/assets/js/16.96d600e7.js" defer></script>
+  </body>
+</html>

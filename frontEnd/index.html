@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>简述vue | 久念的个人博客</title>
+    <meta name="description" content="村上春树说过:总之岁月漫长，然而值得等待">
+    <link rel="icon" href="../.vuepress/public/img/logo.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.2412c64d.css" as="style"><link rel="preload" href="/assets/js/app.27194c62.js" as="script"><link rel="preload" href="/assets/js/2.660d2c2d.js" as="script"><link rel="preload" href="/assets/js/9.ecc15e63.js" as="script"><link rel="prefetch" href="/assets/js/10.7e6638b6.js"><link rel="prefetch" href="/assets/js/11.3c882514.js"><link rel="prefetch" href="/assets/js/12.8f14a644.js"><link rel="prefetch" href="/assets/js/13.7ad68c93.js"><link rel="prefetch" href="/assets/js/14.e7071a84.js"><link rel="prefetch" href="/assets/js/15.c868008a.js"><link rel="prefetch" href="/assets/js/16.96d600e7.js"><link rel="prefetch" href="/assets/js/17.216bbb18.js"><link rel="prefetch" href="/assets/js/18.132d27eb.js"><link rel="prefetch" href="/assets/js/19.94321978.js"><link rel="prefetch" href="/assets/js/20.5ff51867.js"><link rel="prefetch" href="/assets/js/21.5034d234.js"><link rel="prefetch" href="/assets/js/22.6e708266.js"><link rel="prefetch" href="/assets/js/23.afc937fb.js"><link rel="prefetch" href="/assets/js/24.6a2d27de.js"><link rel="prefetch" href="/assets/js/25.40bacf7a.js"><link rel="prefetch" href="/assets/js/26.94f1f69e.js"><link rel="prefetch" href="/assets/js/27.9009e8ee.js"><link rel="prefetch" href="/assets/js/28.d79333d2.js"><link rel="prefetch" href="/assets/js/29.3451956d.js"><link rel="prefetch" href="/assets/js/3.25a26ba3.js"><link rel="prefetch" href="/assets/js/30.601df3fc.js"><link rel="prefetch" href="/assets/js/31.80e18c66.js"><link rel="prefetch" href="/assets/js/32.e6dd8fca.js"><link rel="prefetch" href="/assets/js/33.beab8789.js"><link rel="prefetch" href="/assets/js/34.7a02303d.js"><link rel="prefetch" href="/assets/js/4.f74a38f4.js"><link rel="prefetch" href="/assets/js/5.4c28bf85.js"><link rel="prefetch" href="/assets/js/6.11aca216.js"><link rel="prefetch" href="/assets/js/7.8d7844b8.js"><link rel="prefetch" href="/assets/js/8.56426901.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2412c64d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">久念的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link router-link-exact-active router-link-active">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link router-link-exact-active router-link-active">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/frontEnd/" class="active sidebar-link">简述vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontEnd/#_1-vue-js是什么" class="sidebar-link">1. Vue.js是什么?</a></li><li class="sidebar-sub-header"><a href="/frontEnd/#_2-基本使用" class="sidebar-link">2. 基本使用</a></li><li class="sidebar-sub-header"><a href="/frontEnd/#_3-vue对象的选项" class="sidebar-link">3. Vue对象的选项</a></li><li class="sidebar-sub-header"><a href="/frontEnd/#_4-过渡动画" class="sidebar-link">4. 过渡动画</a></li><li class="sidebar-sub-header"><a href="/frontEnd/#_5-生命周期" class="sidebar-link">5. 生命周期</a></li><li class="sidebar-sub-header"><a href="/frontEnd/#_6-自定义过滤器" class="sidebar-link">6. 自定义过滤器</a></li><li class="sidebar-sub-header"><a href="/frontEnd/#_7-vue内置指令" class="sidebar-link">7. vue内置指令</a></li><li class="sidebar-sub-header"><a href="/frontEnd/#_8-自定义指令" class="sidebar-link">8. 自定义指令</a></li></ul></li><li><a href="/frontEnd/test.html" class="sidebar-link">vuex</a></li><li><a href="/frontEnd/vue.html" class="sidebar-link">vue脚手架&amp;路由</a></li><li><a href="/frontEnd/MVVM.html" class="sidebar-link">vue源码解析</a></li><li><a href="/frontEnd/React.html" class="sidebar-link">React</a></li><li><a href="/frontEnd/React-router.html" class="sidebar-link">React-router</a></li><li><a href="/frontEnd/Redux.html" class="sidebar-link">Redux</a></li><li><a href="/frontEnd/React-ui.html" class="sidebar-link">最流行的开源React UI组件库</a></li><li><a href="/frontEnd/wxmin.html" class="sidebar-link">小程序</a></li><li><a href="/frontEnd/ajax.html" class="sidebar-link">ajax</a></li><li><a href="/frontEnd/es6.html" class="sidebar-link">ES6</a></li><li><a href="/frontEnd/TypeScript.html" class="sidebar-link">TypeScript (基础)</a></li><li><a href="/frontEnd/ts.html" class="sidebar-link">TypeScript (进阶)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="简述vue"><a href="#简述vue" class="header-anchor">#</a> 简述vue</h1> <h2 id="_1-vue-js是什么"><a href="#_1-vue-js是什么" class="header-anchor">#</a> 1. Vue.js是什么?</h2> <pre><code>1). 一位华裔前Google工程师(尤雨溪)开发的前端js库
+2). 作用: 动态构建用户界面
+3). 特点:
+	* 遵循MVVM模式
+	* 编码简洁, 体积小, 运行效率高, 移动/PC端开发
+	* 它本身只关注UI, 可以轻松引入vue插件和其它第三库开发项目
+4). 与其它框架的关联:
+	* 借鉴angular的模板和数据绑定技术
+	* 借鉴react的组件化和虚拟DOM技术
+5). vue包含一系列的扩展插件(库):
+	* vue-cli: vue脚手架
+	* vue-resource(axios): ajax请求
+	* vue-router: 路由
+	* vuex: 状态管理
+	* vue-lazyload: 图片懒加载
+	* vue-scroller: 页面滑动相关
+	* mint-ui: 基于vue的组件库(移动端)
+	* element-ui: 基于vue的组件库(PC端)
+</code></pre> <h2 id="_2-基本使用"><a href="#_2-基本使用" class="header-anchor">#</a> 2. 基本使用</h2> <pre><code>1). 引入vue.js
+2). 创建Vue实例对象(vm), 指定选项(配置)对象
+	el : 指定dom标签容器的选择器
+	data : 指定初始化状态数据的对象/函数(返回一个对象)
+3). 在页面模板中使用{{}}或vue指令
+</code></pre> <h2 id="_3-vue对象的选项"><a href="#_3-vue对象的选项" class="header-anchor">#</a> 3. Vue对象的选项</h2> <h4 id="_1-el"><a href="#_1-el" class="header-anchor">#</a> 1). el</h4> <pre><code>指定dom标签容器的选择器
+Vue就会管理对应的标签及其子标签
+</code></pre> <h4 id="_2-data"><a href="#_2-data" class="header-anchor">#</a> 2). data</h4> <pre><code>对象或函数类型
+指定初始化状态属性数据的对象
+vm也会自动拥有data中所有属性
+页面中可以直接访问使用
+数据代理: 由vm对象来代理对data中所有属性的操作(读/写)
+</code></pre> <h4 id="_3-methods"><a href="#_3-methods" class="header-anchor">#</a> 3). methods</h4> <pre><code>包含多个方法的对象
+供页面中的事件指令来绑定回调
+回调函数默认有event参数, 但也可以指定自己的参数
+所有的方法由vue对象来调用, 访问data中的属性直接使用this.xxx
+</code></pre> <h4 id="_4-computed"><a href="#_4-computed" class="header-anchor">#</a> 4). computed</h4> <pre><code>包含多个方法的对象
+对状态属性进行计算返回一个新的数据, 供页面获取显示
+一般情况下是相当于是一个只读的属性
+利用set/get方法来实现属性数据的计算读取, 同时监视属性数据的变化
+如何给对象定义get/set属性
+	在创建对象时指定: get name () {return xxx} / set name (value) {}
+  	对象创建之后指定: Object.defineProperty(obj, age, {get(){}, set(value){}})
+</code></pre> <h4 id="_5-watch"><a href="#_5-watch" class="header-anchor">#</a> 5). watch</h4> <pre><code>包含多个属性监视的对象
+分为一般监视和深度监视
+    xxx: function(value){}
+	xxx : {
+		deep : true,
+		handler : fun(value)
+	}
+另一种添加监视方式: vm.$watch('xxx', function(value){})
+</code></pre> <h2 id="_4-过渡动画"><a href="#_4-过渡动画" class="header-anchor">#</a> 4. 过渡动画</h2> <pre><code>利用vue去操控css的transition/animation动画
+模板: 使用&lt;transition name='xxx'&gt;包含带动画的标签
+css样式
+	.fade-enter-active: 进入过程, 指定进入的transition
+	.fade-leave-active: 离开过程, 指定离开的transition
+	.xxx-enter, .xxx-leave-to: 指定隐藏的样式
+编码例子
+    .xxx-enter-active, .xxx-leave-active {
+      transition: opacity .5s
+    }
+    .xxx-enter, .xxx-leave-to {
+      opacity: 0
+    }
+    
+    &lt;transition name=&quot;xxx&quot;&gt;
+      &lt;p v-if=&quot;show&quot;&gt;hello&lt;/p&gt;
+    &lt;/transition&gt;
+</code></pre> <h2 id="_5-生命周期"><a href="#_5-生命周期" class="header-anchor">#</a> 5. 生命周期</h2> <pre><code>vm/组件对象
+生命周期图
+主要的生命周期函数(钩子)
+	created(){} / mounted(){}: 启动异步任务(启动定时器,发送ajax请求, 绑定监听)
+	beforeCreate(){}:数据初始化之前调用
+	create(){}:数据初始化之后调用
+	beforeMount(){}:页面渲染前调用
+	mount(){}:页面渲染后调用
+	beforeUpdate(){}:数据更新前调用
+	update(){}:数据更新后调用
+	beforeDestroy(){}: 做一些收尾的工作,销毁实例对象前调用
+	destroy(){}:实例对象销毁之后调用
+	this.$destroy():销毁Vue实例对象
+</code></pre> <h2 id="_6-自定义过滤器"><a href="#_6-自定义过滤器" class="header-anchor">#</a> 6. 自定义过滤器</h2> <h4 id="_1-理解"><a href="#_1-理解" class="header-anchor">#</a> 1). 理解</h4> <pre><code>对需要显示的数据进行格式化后再显示
+</code></pre> <h4 id="_2-编码"><a href="#_2-编码" class="header-anchor">#</a> 2). 编码</h4> <pre><code>1). 定义过滤器
+	Vue.filter(filterName, function(value[,arg1,arg2,...]){
+	  // 进行一定的数据处理
+	  return newValue
+	})
+2). 使用过滤器
+	&lt;div&gt;&lt;/div&gt;
+	&lt;div&gt;&lt;/div&gt;
+</code></pre> <h2 id="_7-vue内置指令"><a href="#_7-vue内置指令" class="header-anchor">#</a> 7. vue内置指令</h2> <pre><code>v-text/v-html: 指定标签体
+	* v-text : 当作纯文本
+	* v-html : 将value作为html标签来解析
+v-if v-else v-show: 显示/隐藏元素
+	* v-if : 如果vlaue为true, 当前标签会输出在页面中
+	* v-else : 与v-if一起使用, 如果value为false, 将当前标签输出到页面中
+	* v-show: 就会在标签中添加display样式, 如果vlaue为true, display=block, 否则是none
+v-for : 遍历
+	* 遍历数组 : v-for=&quot;(person, index) in persons&quot;   
+	* 遍历对象 : v-for=&quot;value in person&quot;   $key
+v-on : 绑定事件监听
+	* v-on:事件名, 可以缩写为: @事件名
+	* 监视具体的按键: @keyup.keyCode   @keyup.enter
+	* 停止事件的冒泡和阻止事件默认行为: @click.stop   @click.prevent
+	* 隐含对象: $event
+v-bind : 强制绑定解析表达式  
+	* html标签属性是不支持表达式的, 就可以使用v-bind
+	* 可以缩写为:  :id='name'
+	* :class
+	  * :class=&quot;a&quot;
+		* :class=&quot;{classA : isA, classB : isB}&quot;
+		* :class=&quot;[classA, classB]&quot;
+	* :style
+		:style=&quot;{color : color}&quot;
+v-model
+	* 双向数据绑定
+	* 自动收集用户输入数据
+ref : 标识某个标签
+	* ref='xxx'
+	* 读取得到标签对象: this.$refs.xxx
+</code></pre> <h2 id="_8-自定义指令"><a href="#_8-自定义指令" class="header-anchor">#</a> 8. 自定义指令</h2> <h4 id="_1-注册全局指令"><a href="#_1-注册全局指令" class="header-anchor">#</a> 1). 注册全局指令</h4> <pre><code>Vue.directive('my-directive', function(el, binding){
+  el.innerHTML = binding.value.toUpperCase()
+})
+</code></pre> <h4 id="_2-注册局部指令"><a href="#_2-注册局部指令" class="header-anchor">#</a> 2). 注册局部指令</h4> <pre><code>directives : {
+  'my-directive' : function(el, binding) {
+      el.innerHTML = binding.value.toUpperCase()
+  }
+}
+</code></pre> <h4 id="_3-使用指令"><a href="#_3-使用指令" class="header-anchor">#</a> 3). 使用指令</h4> <pre><code>&lt;div v-my-directive='xxx'&gt;
+</code></pre></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/frontEnd/test.html">vuex</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.27194c62.js" defer></script><script src="/assets/js/2.660d2c2d.js" defer></script><script src="/assets/js/9.ecc15e63.js" defer></script>
+  </body>
+</html>

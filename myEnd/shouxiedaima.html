@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>自己封装的一些方法和函数 | 久念的个人博客</title>
+    <meta name="description" content="村上春树说过:总之岁月漫长，然而值得等待">
+    <link rel="icon" href="../.vuepress/public/img/logo.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.2412c64d.css" as="style"><link rel="preload" href="/assets/js/app.27194c62.js" as="script"><link rel="preload" href="/assets/js/2.660d2c2d.js" as="script"><link rel="preload" href="/assets/js/32.e6dd8fca.js" as="script"><link rel="prefetch" href="/assets/js/10.7e6638b6.js"><link rel="prefetch" href="/assets/js/11.3c882514.js"><link rel="prefetch" href="/assets/js/12.8f14a644.js"><link rel="prefetch" href="/assets/js/13.7ad68c93.js"><link rel="prefetch" href="/assets/js/14.e7071a84.js"><link rel="prefetch" href="/assets/js/15.c868008a.js"><link rel="prefetch" href="/assets/js/16.96d600e7.js"><link rel="prefetch" href="/assets/js/17.216bbb18.js"><link rel="prefetch" href="/assets/js/18.132d27eb.js"><link rel="prefetch" href="/assets/js/19.94321978.js"><link rel="prefetch" href="/assets/js/20.5ff51867.js"><link rel="prefetch" href="/assets/js/21.5034d234.js"><link rel="prefetch" href="/assets/js/22.6e708266.js"><link rel="prefetch" href="/assets/js/23.afc937fb.js"><link rel="prefetch" href="/assets/js/24.6a2d27de.js"><link rel="prefetch" href="/assets/js/25.40bacf7a.js"><link rel="prefetch" href="/assets/js/26.94f1f69e.js"><link rel="prefetch" href="/assets/js/27.9009e8ee.js"><link rel="prefetch" href="/assets/js/28.d79333d2.js"><link rel="prefetch" href="/assets/js/29.3451956d.js"><link rel="prefetch" href="/assets/js/3.25a26ba3.js"><link rel="prefetch" href="/assets/js/30.601df3fc.js"><link rel="prefetch" href="/assets/js/31.80e18c66.js"><link rel="prefetch" href="/assets/js/33.beab8789.js"><link rel="prefetch" href="/assets/js/34.7a02303d.js"><link rel="prefetch" href="/assets/js/4.f74a38f4.js"><link rel="prefetch" href="/assets/js/5.4c28bf85.js"><link rel="prefetch" href="/assets/js/6.11aca216.js"><link rel="prefetch" href="/assets/js/7.8d7844b8.js"><link rel="prefetch" href="/assets/js/8.56426901.js"><link rel="prefetch" href="/assets/js/9.ecc15e63.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2412c64d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">久念的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link router-link-active">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link router-link-active">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myEnd/" class="sidebar-link">性能优化</a></li><li><a href="/myEnd/test.html" class="sidebar-link">浏览器缓存及其机制</a></li><li><a href="/myEnd/onYidong.html" class="sidebar-link">有关移动端</a></li><li><a href="/myEnd/onPay.html" class="sidebar-link">vue移动端支付</a></li><li><a href="/myEnd/SVN.html" class="sidebar-link">svn</a></li><li><a href="/myEnd/git.html" class="sidebar-link">git</a></li><li><a href="/myEnd/shouxiedaima.html" class="active sidebar-link">自己封装的一些方法和函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myEnd/shouxiedaima.html#函数节流和防抖" class="sidebar-link">函数节流和防抖</a></li><li class="sidebar-sub-header"><a href="/myEnd/shouxiedaima.html#数组快排" class="sidebar-link">数组快排</a></li><li class="sidebar-sub-header"><a href="/myEnd/shouxiedaima.html#用js实现instanceof-instanceof判断传入的参数a是否参数b的类型" class="sidebar-link">用js实现instanceof(instanceof判断传入的参数A是否参数B的类型)</a></li></ul></li><li><a href="/myEnd/quacking.html" class="sidebar-link">数组去重的方法</a></li><li><a href="/myEnd/array.html" class="sidebar-link">数组常用的一些方法</a></li><li><a href="/myEnd/css.html" class="sidebar-link">CSS隐藏元素的N种实现方式。</a></li><li><a href="/myEnd/mescroll.html" class="sidebar-link">mescroll.js的使用</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="自己封装的一些方法和函数"><a href="#自己封装的一些方法和函数" class="header-anchor">#</a> 自己封装的一些方法和函数</h1> <h2 id="函数节流和防抖"><a href="#函数节流和防抖" class="header-anchor">#</a> 函数节流和防抖</h2> <ul><li><p>单位时间内，减少函数的调用次数。 提升性能</p></li> <li><p>节流函数：单位时间内函数只调用一次，第一次</p> <div class="language- extra-class"><pre class="language-text"><code>	function throttle(fn, time) {
+		let startTime = 0;
+		return function () {
+		  const endTime = Date.now();
+		  if (endTime - startTime &gt;= time) {
+			fn.apply(this, arguments);  // [[123], 2, 3]
+		  }
+		}
+	}
+</code></pre></div></li> <li><p>防抖函数：单位时间内函数只调用一次，最后一次</p> <div class="language- extra-class"><pre class="language-text"><code>	function debounce(fn, time) {
+		let timerId = null;
+		return function () {
+			clearTimeout(timerId);
+			const _self = this;
+			const args = arguments;
+			timerId = setTimeout(function () {
+				fn.apply(_self, args);
+			}, time)
+		}
+	
+	}
+</code></pre></div></li></ul> <h2 id="数组快排"><a href="#数组快排" class="header-anchor">#</a> 数组快排</h2> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype.quickSort = function () {
+
+  // 生成新数组
+  const arr = [...this];
+  // 判断数组长度，大于1才参与排序
+  let length = arr.length;
+  if (length &lt; 2) return arr;
+  // 找到基准值（简单取中间值）
+  const pivotIndex = Math.floor(length / 2);
+  // 基准值不参与排序， 所以从数组提取来
+  const pivot = arr.splice(pivotIndex, 1);
+  length--;
+
+  const left = [];
+  const right = [];
+
+  for (let i = 0; i &lt; length; i++) {
+    let item = arr[i];
+    if (item &lt; pivot) {
+      left.push(item);
+    } else {
+      right.push(item);
+    }
+  }
+  return left.quickSort().concat(pivot, right.quickSort());
+};
+
+const arr = [2, 8, 4, 7, 5, 2, 3, 6, 1];
+
+console.log(arr.quickSort());
+console.log(arr);
+</code></pre></div><h2 id="用js实现instanceof-instanceof判断传入的参数a是否参数b的类型"><a href="#用js实现instanceof-instanceof判断传入的参数a是否参数b的类型" class="header-anchor">#</a> 用js实现instanceof(instanceof判断传入的参数A是否参数B的类型)</h2> <div class="language- extra-class"><pre class="language-text"><code>function myInstanceof (A, B) {
+  // 检查B必须是一个函数类型。 只有函数有prototype
+  if (typeof B !== 'function') {
+    throw new Error ('B is not a function');
+  };
+  // 如果A不是对象(对象包含普通对象、函数、数组)，就不用检查，直接返回false。
+  if (typeof A !== ('object' || 'function')) {
+    return false;
+  };
+  let a = A.__proto__;
+  const b = B.prototype;
+  while (a) {
+    if ( a === b ) {
+      return true;
+    } else {
+      a = a.__proto__;
+    }
+  }
+  return false;
+};
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myEnd/git.html" class="prev">git</a></span> <span class="next"><a href="/myEnd/quacking.html">数组去重的方法</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.27194c62.js" defer></script><script src="/assets/js/2.660d2c2d.js" defer></script><script src="/assets/js/32.e6dd8fca.js" defer></script>
+  </body>
+</html>

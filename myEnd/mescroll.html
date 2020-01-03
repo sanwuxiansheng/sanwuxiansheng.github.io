@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mescroll.js的使用 | 久念的个人博客</title>
+    <meta name="description" content="村上春树说过:总之岁月漫长，然而值得等待">
+    <link rel="icon" href="../.vuepress/public/img/logo.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.2412c64d.css" as="style"><link rel="preload" href="/assets/js/app.27194c62.js" as="script"><link rel="preload" href="/assets/js/2.660d2c2d.js" as="script"><link rel="preload" href="/assets/js/28.d79333d2.js" as="script"><link rel="prefetch" href="/assets/js/10.7e6638b6.js"><link rel="prefetch" href="/assets/js/11.3c882514.js"><link rel="prefetch" href="/assets/js/12.8f14a644.js"><link rel="prefetch" href="/assets/js/13.7ad68c93.js"><link rel="prefetch" href="/assets/js/14.e7071a84.js"><link rel="prefetch" href="/assets/js/15.c868008a.js"><link rel="prefetch" href="/assets/js/16.96d600e7.js"><link rel="prefetch" href="/assets/js/17.216bbb18.js"><link rel="prefetch" href="/assets/js/18.132d27eb.js"><link rel="prefetch" href="/assets/js/19.94321978.js"><link rel="prefetch" href="/assets/js/20.5ff51867.js"><link rel="prefetch" href="/assets/js/21.5034d234.js"><link rel="prefetch" href="/assets/js/22.6e708266.js"><link rel="prefetch" href="/assets/js/23.afc937fb.js"><link rel="prefetch" href="/assets/js/24.6a2d27de.js"><link rel="prefetch" href="/assets/js/25.40bacf7a.js"><link rel="prefetch" href="/assets/js/26.94f1f69e.js"><link rel="prefetch" href="/assets/js/27.9009e8ee.js"><link rel="prefetch" href="/assets/js/29.3451956d.js"><link rel="prefetch" href="/assets/js/3.25a26ba3.js"><link rel="prefetch" href="/assets/js/30.601df3fc.js"><link rel="prefetch" href="/assets/js/31.80e18c66.js"><link rel="prefetch" href="/assets/js/32.e6dd8fca.js"><link rel="prefetch" href="/assets/js/33.beab8789.js"><link rel="prefetch" href="/assets/js/34.7a02303d.js"><link rel="prefetch" href="/assets/js/4.f74a38f4.js"><link rel="prefetch" href="/assets/js/5.4c28bf85.js"><link rel="prefetch" href="/assets/js/6.11aca216.js"><link rel="prefetch" href="/assets/js/7.8d7844b8.js"><link rel="prefetch" href="/assets/js/8.56426901.js"><link rel="prefetch" href="/assets/js/9.ecc15e63.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2412c64d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">久念的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link router-link-active">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link router-link-active">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myEnd/" class="sidebar-link">性能优化</a></li><li><a href="/myEnd/test.html" class="sidebar-link">浏览器缓存及其机制</a></li><li><a href="/myEnd/onYidong.html" class="sidebar-link">有关移动端</a></li><li><a href="/myEnd/onPay.html" class="sidebar-link">vue移动端支付</a></li><li><a href="/myEnd/SVN.html" class="sidebar-link">svn</a></li><li><a href="/myEnd/git.html" class="sidebar-link">git</a></li><li><a href="/myEnd/shouxiedaima.html" class="sidebar-link">自己封装的一些方法和函数</a></li><li><a href="/myEnd/quacking.html" class="sidebar-link">数组去重的方法</a></li><li><a href="/myEnd/array.html" class="sidebar-link">数组常用的一些方法</a></li><li><a href="/myEnd/css.html" class="sidebar-link">CSS隐藏元素的N种实现方式。</a></li><li><a href="/myEnd/mescroll.html" class="active sidebar-link">mescroll.js的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myEnd/mescroll.html#mescroll官网：http-www-mescroll-com" class="sidebar-link">mescroll官网：http://www.mescroll.com</a></li><li class="sidebar-sub-header"><a href="/myEnd/mescroll.html#_1-npm-安装mescroll" class="sidebar-link">1. npm 安装mescroll</a></li><li class="sidebar-sub-header"><a href="/myEnd/mescroll.html#_2-如果之前-vue项目初始化-是用cnpm需要" class="sidebar-link">2.如果之前 vue项目初始化 是用cnpm需要</a></li><li class="sidebar-sub-header"><a href="/myEnd/mescroll.html#_3-在页面中引入mescroll，" class="sidebar-link">3.在页面中引入mescroll，</a></li><li class="sidebar-sub-header"><a href="/myEnd/mescroll.html#_4-vue单文件示例" class="sidebar-link">4. vue单文件示例 :</a></li><li class="sidebar-sub-header"><a href="/myEnd/mescroll.html#mescroll组件使用步骤-至少更新到1-3-5版本" class="sidebar-link">mescroll组件使用步骤 (至少更新到1.3.5版本):</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mescroll-js的使用"><a href="#mescroll-js的使用" class="header-anchor">#</a> mescroll.js的使用</h1> <h2 id="mescroll官网：http-www-mescroll-com"><a href="#mescroll官网：http-www-mescroll-com" class="header-anchor">#</a> mescroll官网：http://www.mescroll.com</h2> <h2 id="_1-npm-安装mescroll"><a href="#_1-npm-安装mescroll" class="header-anchor">#</a> 1. npm 安装mescroll</h2> <div class="language- extra-class"><pre class="language-text"><code>    npm install  --save mescroll.js
+</code></pre></div><h2 id="_2-如果之前-vue项目初始化-是用cnpm需要"><a href="#_2-如果之前-vue项目初始化-是用cnpm需要" class="header-anchor">#</a> 2.如果之前 vue项目初始化 是用cnpm需要</h2> <ul><li><p>1&gt;：卸载 npm uninstall webpack-dev-server，</p></li> <li><p>2&gt;：再安装这个npm i webpack-dev-server@2.9.7</p></li> <li><p>运行命令是：</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>  npm run dev
+</code></pre></div><h2 id="_3-在页面中引入mescroll，"><a href="#_3-在页面中引入mescroll，" class="header-anchor">#</a> 3.在页面中引入mescroll，</h2> <div class="language- extra-class"><pre class="language-text"><code>import MeScroll from 'mescroll.js'
+
+import 'mescroll.js/mescroll.min.css'
+</code></pre></div><h2 id="_4-vue单文件示例"><a href="#_4-vue单文件示例" class="header-anchor">#</a> 4. vue单文件示例 :</h2> <div class="language- extra-class"><pre class="language-text"><code>			&lt;template&gt;
+			  &lt;div&gt;
+			    &lt;!--mescroll滚动区域的基本结构,为避免id重复导致的多次初始化,这里使用ref--&gt;
+			     &lt;div ref=&quot;mescroll&quot; class=&quot;mescroll&quot;&gt;
+			      &lt;div&gt;
+			      &lt;!--内容...--&gt;
+			      &lt;/div&gt;
+			    &lt;/div&gt;
+			  &lt;/div&gt;
+			&lt;/template&gt;
+			
+			&lt;script&gt;
+			//引入mescroll.min.js和mescroll.min.css
+			import MeScroll from 'mescroll.js'
+			import 'mescroll.js/mescroll.min.css'
+			
+			export default {
+			  name: 'xxx',
+			  data() {
+			    return {
+			      mescroll: null, //mescroll实例对象
+			      dataList:[] //列表数据
+			    }
+			  },
+			  mounted: function () {
+			    //创建MeScroll对象
+			    this.mescroll = new MeScroll(this.$refs.mescroll, { //在mounted初始化mescroll,确保此处配置的ref有值
+			    	// down:{}, //下拉刷新的配置. (如果下拉刷新和上拉加载处理的逻辑是一样的,则down可不用写了)
+			      up: {
+			        callback: this.upCallback,
+		        	// 以下是一些常用的配置,当然不写也可以的.
+				page: {
+					num: 0, //当前页 默认0,回调之前会加1; 即callback(page)会从1开始
+					size: 10, //每页数据条数,默认10
+				},
+				htmlNodata: '&lt;p class=&quot;upwarp-nodata&quot;&gt;-- END --&lt;/p&gt;',
+				noMoreSize: 5, //如果列表已无数据,可设置列表的总数量要大于5才显示无更多数据;
+							避免列表数据过少(比如只有一条数据),显示无更多数据会不好看
+				toTop: {
+					//回到顶部按钮
+					src: &quot;./static/mescroll/mescroll-totop.png&quot;, //图片路径,默认null,支持网络图
+					offset: 1000, //列表滚动1000px才显示回到顶部按钮
+				},
+				empty: {
+					//列表第一页无任何数据时,显示的空提示布局; 需配置warpId才显示
+					warpId:	&quot;xxid&quot;, //父布局的id (1.3.5版本支持传入dom元素)
+					icon: &quot;./static/mescroll/mescroll-empty.png&quot;, //图标,默认null,支持网络图
+					tip: &quot;暂无相关数据~&quot;, //提示
+				}
+			      }
+			    });
+			  },
+			  methods: {
+			    //上拉回调 page = {num:1, size:10}; num:当前页 ,默认从1开始; size:每页数据条数,默认10
+			    upCallback(page) {
+			      //联网请求
+			      axios.get(&quot;xxxxxx&quot;, {
+			        params: {
+			          num: page.num, //页码
+			          size: page.size //每页长度
+			        }
+			      }).then((response)=&gt; {
+			        //请求的列表数据
+			        let arr = response.data;
+			        //如果是第一页需手动置空列表
+			        if (page.num == 1) this.dataList = [];
+			        //把请求到的数据添加到列表
+			        this.dataList = this.dataList.concat(arr);
+			        //数据渲染成功后,隐藏下拉刷新的状态
+			        this.$nextTick(() =&gt; {
+			          this.mescroll.endSuccess(arr.length);
+			        })
+			      }).catch((e)=&gt; {
+			        //联网失败的回调,隐藏下拉刷新和上拉加载的状态;
+			        this.mescroll.endErr();
+			      })
+			    }
+			  },
+			  // 进入路由时,恢复列表状态
+			  beforeRouteEnter (to, from, next) {  // 如果没有配置回到顶部按钮或isBounce,则beforeRouteEnter不用写
+			    next(vm =&gt; {
+			      if (vm.mescroll) {
+			      	// 恢复到之前设置的isBounce状态
+			        if (vm.mescroll.lastBounce != null) vm.mescroll.setBounce(vm.mescroll.lastBounce)
+			        // 滚动到之前列表的位置 (注意:路由使用keep-alive才生效)
+			        if (vm.mescroll.lastScrollTop) {
+			          vm.mescroll.setScrollTop(vm.mescroll.lastScrollTop)
+			          setTimeout(() =&gt; { // 需延时,因为setScrollTop内部会触发onScroll,可能会渐显回到顶部按钮
+			            vm.mescroll.setTopBtnFadeDuration(0)// 设置回到顶部按钮显示时无渐显动画
+			          }, 16)
+			        }
+			      }
+			    })
+			  },
+			  // 离开路由时,记录列表状态
+			  beforeRouteLeave (to, from, next) {  // 如果没有配置回到顶部按钮或isBounce,则beforeRouteLeave不用写
+			    if (this.mescroll) {
+			      this.mescroll.lastBounce = this.mescroll.optUp.isBounce// 记录当前是否禁止ios回弹
+			      this.mescroll.setBounce(true) // 允许bounce
+			      this.mescroll.lastScrollTop = this.mescroll.getScrollTop()// 记录当前滚动条的位置
+			      this.mescroll.hideTopBtn(0)// 隐藏回到顶部按钮,无渐隐动画
+			    }
+			    next()
+			  }
+			}
+			&lt;/script&gt;
+			
+			&lt;style scoped&gt;
+			  /*通过fixed固定mescroll的高度*/
+			  .mescroll {
+			    position: fixed;
+			    top: 44px;
+			    bottom: 0;
+			    height: auto;
+			  }
+			&lt;/style&gt;
+</code></pre></div><ul><li>以上写法有些繁琐,在 vue 中强烈建议使用mescroll组件,简单快捷 :</li></ul> <h2 id="mescroll组件使用步骤-至少更新到1-3-5版本"><a href="#mescroll组件使用步骤-至少更新到1-3-5版本" class="header-anchor">#</a> mescroll组件使用步骤 (至少更新到1.3.5版本):</h2> <pre><code>1. 执行npm命令安装mescroll :   npm install --save mescroll.js
+
+2. 引入mescroll组件 :   import MescrollVue from 'mescroll.js/mescroll.vue'
+
+3. vue单文件示例 :
+</code></pre> <div class="language- extra-class"><pre class="language-text"><code>			&lt;template&gt;
+			  &lt;div&gt;
+			    &lt;!--mescroll滚动区域的基本结构--&gt;
+			    &lt;mescroll-vue ref=&quot;mescroll&quot; :down=&quot;mescrollDown&quot; :up=&quot;mescrollUp&quot; @init=&quot;mescrollInit&quot;&gt;
+			      &lt;!--内容...--&gt;
+			    &lt;/mescroll-vue&gt;
+			  &lt;/div&gt;
+			&lt;/template&gt;
+			
+			&lt;script&gt;
+			// 引入mescroll的vue组件
+			import MescrollVue from 'mescroll.js/mescroll.vue'
+			
+			export default {
+			  name: 'xxx',
+			  components: {
+			    MescrollVue // 注册mescroll组件
+			  },
+			  data () {
+			    return {
+			      mescroll: null, // mescroll实例对象
+			      mescrollDown:{}, //下拉刷新的配置. (如果下拉刷新和上拉加载处理的逻辑是一样的,则mescrollDown可不用写了)
+			      mescrollUp: { // 上拉加载的配置.
+			        callback: this.upCallback, // 上拉回调,此处简写; 相当于 callback: function(page, mescroll) { }
+			        //以下是一些常用的配置,当然不写也可以的.
+				page: {
+					num: 0, //当前页 默认0,回调之前会加1; 即callback(page)会从1开始
+					size: 10 //每页数据条数,默认10
+				},
+				htmlNodata: '&lt;p class=&quot;upwarp-nodata&quot;&gt;-- END --&lt;/p&gt;',
+				noMoreSize: 5, //如果列表已无数据,可设置列表的总数量要大于5才显示无更多数据;
+							避免列表数据过少(比如只有一条数据),显示无更多数据会不好看
+							这就是为什么无更多数据有时候不显示的原因
+				toTop: {
+					//回到顶部按钮
+					src: &quot;./static/mescroll/mescroll-totop.png&quot;, //图片路径,默认null,支持网络图
+					offset: 1000 //列表滚动1000px才显示回到顶部按钮
+				},
+				empty: {
+					//列表第一页无任何数据时,显示的空提示布局; 需配置warpId才显示
+					warpId: &quot;xxid&quot;, //父布局的id (1.3.5版本支持传入dom元素)
+					icon: &quot;./static/mescroll/mescroll-empty.png&quot;, //图标,默认null,支持网络图
+					tip: &quot;暂无相关数据~&quot; //提示
+				}
+			      },
+			      dataList: [] // 列表数据
+			    }
+			  },
+			  beforeRouteEnter (to, from, next) { // 如果没有配置回到顶部按钮或isBounce,则beforeRouteEnter不用写
+			    next(vm =&gt; {
+			       // 找到当前mescroll的ref,调用子组件mescroll-vue的beforeRouteEnter方法
+			      vm.$refs.mescroll &amp;&amp; vm.$refs.mescroll.beforeRouteEnter() // 进入路由时,滚动到原来的列表位置,恢复回到顶部按钮和isBounce的配置
+			    })
+			  },
+			  beforeRouteLeave (to, from, next) { // 如果没有配置回到顶部按钮或isBounce,则beforeRouteLeave不用写
+			     // 找到当前mescroll的ref,调用子组件mescroll-vue的beforeRouteLeave方法
+			    this.$refs.mescroll &amp;&amp; this.$refs.mescroll.beforeRouteLeave() // 退出路由时,记录列表滚动的位置,隐藏回到顶部按钮和isBounce的配置
+			    next()
+			  },
+			  methods: {
+			    // mescroll组件初始化的回调,可获取到mescroll对象
+			    mescrollInit (mescroll) {
+			      this.mescroll = mescroll  // 如果this.mescroll对象没有使用到,则mescrollInit可以不用配置
+			    },
+			    // 上拉回调 page = {num:1, size:10}; num:当前页 ,默认从1开始; size:每页数据条数,默认10
+			    upCallback (page, mescroll) {
+			      // 联网请求
+			      axios.get('xxxxxx', {
+			        params: {
+			          num: page.num, // 页码
+			          size: page.size // 每页长度
+			        }
+			      }).then((response) =&gt; {
+			        // 请求的列表数据
+			        let arr = response.data
+			        // 如果是第一页需手动置空列表
+			        if (page.num === 1) this.dataList = []
+			        // 把请求到的数据添加到列表
+			        this.dataList = this.dataList.concat(arr)
+			        // 数据渲染成功后,隐藏下拉刷新的状态
+			        this.$nextTick(() =&gt; {
+			          mescroll.endSuccess(arr.length)
+			        })
+			      }).catch((e) =&gt; {
+			        // 联网失败的回调,隐藏下拉刷新和上拉加载的状态;
+			        mescroll.endErr()
+			      })
+			    }
+			  }
+			}
+			&lt;/script&gt;
+			
+			&lt;style scoped&gt;
+			  /*通过fixed固定mescroll的高度*/
+			  .mescroll {
+			    position: fixed;
+			    top: 44px;
+			    bottom: 0;
+			    height: auto;
+			  }
+			&lt;/style&gt;
+</code></pre></div><ul><li>相关参数和api可查看mescroll官网：http://www.mescroll.com</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myEnd/css.html" class="prev">CSS隐藏元素的N种实现方式。</a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.27194c62.js" defer></script><script src="/assets/js/2.660d2c2d.js" defer></script><script src="/assets/js/28.d79333d2.js" defer></script>
+  </body>
+</html>

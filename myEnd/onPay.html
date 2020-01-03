@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue移动端支付 | 久念的个人博客</title>
+    <meta name="description" content="村上春树说过:总之岁月漫长，然而值得等待">
+    <link rel="icon" href="../.vuepress/public/img/logo.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.2412c64d.css" as="style"><link rel="preload" href="/assets/js/app.27194c62.js" as="script"><link rel="preload" href="/assets/js/2.660d2c2d.js" as="script"><link rel="preload" href="/assets/js/29.3451956d.js" as="script"><link rel="prefetch" href="/assets/js/10.7e6638b6.js"><link rel="prefetch" href="/assets/js/11.3c882514.js"><link rel="prefetch" href="/assets/js/12.8f14a644.js"><link rel="prefetch" href="/assets/js/13.7ad68c93.js"><link rel="prefetch" href="/assets/js/14.e7071a84.js"><link rel="prefetch" href="/assets/js/15.c868008a.js"><link rel="prefetch" href="/assets/js/16.96d600e7.js"><link rel="prefetch" href="/assets/js/17.216bbb18.js"><link rel="prefetch" href="/assets/js/18.132d27eb.js"><link rel="prefetch" href="/assets/js/19.94321978.js"><link rel="prefetch" href="/assets/js/20.5ff51867.js"><link rel="prefetch" href="/assets/js/21.5034d234.js"><link rel="prefetch" href="/assets/js/22.6e708266.js"><link rel="prefetch" href="/assets/js/23.afc937fb.js"><link rel="prefetch" href="/assets/js/24.6a2d27de.js"><link rel="prefetch" href="/assets/js/25.40bacf7a.js"><link rel="prefetch" href="/assets/js/26.94f1f69e.js"><link rel="prefetch" href="/assets/js/27.9009e8ee.js"><link rel="prefetch" href="/assets/js/28.d79333d2.js"><link rel="prefetch" href="/assets/js/3.25a26ba3.js"><link rel="prefetch" href="/assets/js/30.601df3fc.js"><link rel="prefetch" href="/assets/js/31.80e18c66.js"><link rel="prefetch" href="/assets/js/32.e6dd8fca.js"><link rel="prefetch" href="/assets/js/33.beab8789.js"><link rel="prefetch" href="/assets/js/34.7a02303d.js"><link rel="prefetch" href="/assets/js/4.f74a38f4.js"><link rel="prefetch" href="/assets/js/5.4c28bf85.js"><link rel="prefetch" href="/assets/js/6.11aca216.js"><link rel="prefetch" href="/assets/js/7.8d7844b8.js"><link rel="prefetch" href="/assets/js/8.56426901.js"><link rel="prefetch" href="/assets/js/9.ecc15e63.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2412c64d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">久念的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link router-link-active">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/frontEnd/" class="nav-link">前端基础</a></div><div class="nav-item"><a href="/interviewEnd/" class="nav-link">有关面试</a></div><div class="nav-item"><a href="/myEnd/" class="nav-link router-link-active">个人随笔</a></div><div class="nav-item"><a href="/backEnd/" class="nav-link">优文转载</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术论坛" class="dropdown-title"><span class="title">技术论坛</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://juejin.im/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/myEnd/" class="sidebar-link">性能优化</a></li><li><a href="/myEnd/test.html" class="sidebar-link">浏览器缓存及其机制</a></li><li><a href="/myEnd/onYidong.html" class="sidebar-link">有关移动端</a></li><li><a href="/myEnd/onPay.html" class="active sidebar-link">vue移动端支付</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/myEnd/onPay.html#vue移动端支付" class="sidebar-link">vue移动端支付</a></li></ul></li><li><a href="/myEnd/SVN.html" class="sidebar-link">svn</a></li><li><a href="/myEnd/git.html" class="sidebar-link">git</a></li><li><a href="/myEnd/shouxiedaima.html" class="sidebar-link">自己封装的一些方法和函数</a></li><li><a href="/myEnd/quacking.html" class="sidebar-link">数组去重的方法</a></li><li><a href="/myEnd/array.html" class="sidebar-link">数组常用的一些方法</a></li><li><a href="/myEnd/css.html" class="sidebar-link">CSS隐藏元素的N种实现方式。</a></li><li><a href="/myEnd/mescroll.html" class="sidebar-link">mescroll.js的使用</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="vue移动端支付"><a href="#vue移动端支付" class="header-anchor">#</a> vue移动端支付</h2> <h4 id="一、支付宝支付"><a href="#一、支付宝支付" class="header-anchor">#</a> 一、支付宝支付</h4> <ul><li><p>其实支付宝支付也有支付宝环境和非支付宝环境，这里只做了非支付宝环境即可满足项目需求</p></li> <li><p>支付宝中的H5支付和PC端的一样，主要是后端的工作量，后端完成订单的生成之后返给前端的是form表单，前端只需要负责做页面的跳转即可：</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>
+//立即支付按钮
+onSubmit() {
+    if (this.payWay == 1) {
+    	//支付宝支付
+      	this.$router.push({path: '/aliPay', query: {orderId: this.orderId}});
+    } else if (this.payWay == 2) {
+     //微信支付
+    }
+}
+</code></pre></div><ul><li>选择支付宝方式之后进入支付宝承载页面：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div v-html=&quot;html&quot;&gt;&lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+    import {reqAlipay} from '../../api';
+    export default {
+      data(){
+        return{
+          html:''
+        }
+      },
+      methods:{
+        async fetchVideoPay(){
+          let order_code = this.$route.query.order_code;
+          let asv_coupon_id = this.$route.query.asv_coupon_id;
+          let token = this.$route.query.token;
+          const alipay = await reqAlipay(order_code, asv_coupon_id, token)
+          // console.log(alipay);
+          // if (alipay.errno == '10000') {
+            this.html = alipay;
+            this.$nextTick(() =&gt; {
+              document.forms[0].submit()   //渲染支付宝支付页面
+            })
+            // console.log('渲染页面');
+          // } else {
+            
+          // }
+        }
+      },
+      mounted(){
+        this.fetchVideoPay()
+      }
+    }
+&lt;/script&gt;
+&lt;style lang='stylus' rel='stylesheet/stylus' scoped&gt;
+&lt;/style&gt;
+</code></pre></div><ul><li>进入到支付宝支付页（至此但有一个问题，调起支付后，用户中途取消支付或者点返回键会整个网页一起关闭退出，或者一直在进入支付页面，不知道有没有更好的SEO方案）</li></ul> <h4 id="二、微信支付"><a href="#二、微信支付" class="header-anchor">#</a> 二、微信支付</h4> <ul><li>先判断是否是微信环境</li></ul> <div class="language- extra-class"><pre class="language-text"><code>is_weixn(){
+  var ua = window.navigator.userAgent.toLowerCase();
+  if (ua.match(/MicroMessenger/i) == 'micromessenger'){
+    return true;
+  } else {
+    return false;
+  }
+}
+</code></pre></div><h6 id="_1-微信外部支付"><a href="#_1-微信外部支付" class="header-anchor">#</a> 1. 微信外部支付</h6> <ul><li><p>微信外支付，官方文档也写的很清楚，后端返回一个url地址，前端的工作就是拿到这个url地址进行跳转就可以了</p></li> <li><p>微信外部支付是非常简单，下面是我在项目中的实际代码：</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>onSubmit() {
+    const wxwarrp = await reqWechat(this.order_code, asv_coupon_id, this.token)
+    // reqWechat是我封装好的微信外部支付api
+    if(wxwarrp.status === 1){
+      let url=wxwarrp.url
+      window.location.replace(url)   //这里是后端返回的URL直接进行跳转即可完成微信外支付
+    }else{
+      Toast({
+        message: '支付请求已失效，请重新发起支付',
+        position: 'middle',
+        duration: 1000,
+        forbidClick: true
+      });
+      // 这里的Toast是我使用了Vant插件的一个提示弹窗组件
+      let order_code = this.order_code;
+      let token = this.token;
+      window.location.href = &quot;https://m.cheduo.com/html/asv/order_det?order_code=&quot;+order_code+'&amp;token='+token;
+      // 这里是请求失败后直接跳转到订单详情页并提示用户支付失败
+    }
+}
+</code></pre></div><h6 id="_2-微信内部支付"><a href="#_2-微信内部支付" class="header-anchor">#</a> 2. 微信内部支付</h6> <ul><li><p>微信内部支付的话就要麻烦很多了</p></li> <li><p>首先要获取到openId，然后还要获取到用户的code，之后再根据后台返回来的微信签名、微信签名方式、appId、时间戳、随机串等调起支付。</p></li> <li><p>下面是我在项目中的实际代码：</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>async onPay(){
+    let appID;
+    let result;
+    if(this.radio == '1' &amp;&amp; this.isWX) { // 这里是判断用户是否是在微信环境内并选择微信支付
+        let asv_coupon_id = this.getCookie('couponId');
+        if (!asv_coupon_id) {
+          asv_coupon_id = 0;
+        } // 这一段是优惠卷ID的获取
+        try {
+          result = await reqWxopenID(this.code)
+          appID = result.datas.openid;
+          console.log(result, appID);
+          // 这里是获取openId
+        } catch (error) {
+          console.log(error);
+        }
+        const inwx = await reqInwechat(this.order_code, appID, asv_coupon_id, this.token);
+        // 这里是调起微信内部支付的接口api
+        if (inwx.status === 1) {
+          const pay_params = inwx.data
+          if (typeof WeixinJSBridge == &quot;undefined&quot;){
+            if(document.addEventListener) {
+              document.addEventListener('WeixinJSBridgeReady', this.onBridgeReady, false);
+            }else if (document.attachEvent){
+              document.attachEvent('WeixinJSBridgeReady', this.onBridgeReady); 
+              document.attachEvent('onWeixinJSBridgeReady', this.onBridgeReady);
+            }
+          }else{
+            this.onBridgeReady(pay_params,this);
+          }
+        }else {
+          Toast({
+            message: '支付请求失败',
+            position: 'middle',
+            duration: 1000,
+            forbidClick: true
+          });
+        }
+    }
+},
+onBridgeReady(params,_this,appID) {
+  const pay_params = JSON.parse(params);
+  let res;
+  let appid='wxa9bc2c68483cb54c'; // 这里是appid
+  if (!appID) {
+    async () =&gt; {
+      try {
+        res = await reqWxopenID(_this.code)
+        // 获取openId
+      } catch (error) {
+        // console.log(error);
+      }
+      appID = res.data.openid;
+    }
+  }
+  WeixinJSBridge.invoke(
+    'getBrandWCPayRequest', {
+      &quot;appId&quot;: appid,  //公众号名称，由商户传入     
+      &quot;timeStamp&quot;: pay_params.timeStamp,  //时间戳，自1970年以来的秒数     
+      &quot;nonceStr&quot;: pay_params.nonceStr,  //随机串     
+      &quot;package&quot;: pay_params.package,     
+      &quot;signType&quot;: pay_params.signType,  //微信签名方式：     
+      &quot;paySign&quot;: pay_params.paySign  //微信签名 
+    },
+    function(res){
+      // alert(191,'进入微信内部支付了')
+      if(res.err_msg == &quot;get_brand_wcpay_request:ok&quot;){
+        Toast('支付成功！');
+        let order_code = _this.order_code;
+        let token = _this.token;
+        window.location.href = &quot;https://m.cheduo.com/html/asv/order_det?order_code=&quot;+order_code+'&amp;token='+token;
+      }else if(res.err_msg == 'get_brand_wcpay_request:cancel') {
+        Toast('您已取消支付');
+        let order_code = _this.order_code;
+        let token = _this.token;
+        window.location.href = &quot;https://m.cheduo.com/html/asv/order_det?order_code=&quot;+order_code+'&amp;token='+token;
+      } else {
+        Toast('未知错误.错误详情：'+res.err_msg);
+        let order_code = _this.order_code;
+        let token = _this.token;
+        window.location.href = &quot;https://m.cheduo.com/html/asv/order_det?order_code=&quot;+order_code+'&amp;token='+token;
+      }
+    }); 
+},
+</code></pre></div><ul><li><p>差点忘了至关重要的一点</p></li> <li><p>就是获取用户code，我在项目中是有一个下订单流程，在下订单后才会跳转到支付页面，所以在微信内部环境时下订单的时候就要通过用户无感登录的方式获取到用户code</p></li> <li><p>代码如下：</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>onOrder() {
+    if (this.$store.state.isWX) {
+      let payUrl = `https://m.cheduo.com/html/paydir/asv-pay?order_code=${order_code}&amp;token=${token}`;
+      // 这里的?order_code=${order_code}&amp;token=${token}是为了向支付页面传参
+      let wxUrl = &quot;https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxa9bc2c68483cb54c&amp;redirect_uri=&quot;+payUrl+&quot;&amp;response_type=code&amp;scope=snsapi_base&amp;state=STATE&amp;connect_redirect=1#wechat_redirect&quot;;
+      // 这才是真正的无感登录获取用户code
+      window.location.href = wxUrl;
+      console.log(wxUrl);
+    }else {
+      this.$router.push({ path: '/paydir/asv-pay', query: { order_code } })
+    }
+}
+</code></pre></div><ul><li>至此微信内部支付完成</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/myEnd/onYidong.html" class="prev">有关移动端</a></span> <span class="next"><a href="/myEnd/SVN.html">svn</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.27194c62.js" defer></script><script src="/assets/js/2.660d2c2d.js" defer></script><script src="/assets/js/29.3451956d.js" defer></script>
+  </body>
+</html>
